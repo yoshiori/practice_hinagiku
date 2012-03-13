@@ -1,4 +1,4 @@
-<h1>タスクの新規登録</h>
+<h1>タスクの新規登録</h1>
 <%= form_for @task do |form| %>
 <ul>
   <li><%= form.label :name, "名称" %><%= form.text_field :name %></li>
@@ -12,10 +12,12 @@
     :start_year => Time.current.year,
     :end_year => Time.current.year + 1%>
   </li>
-  <li><%= form.check_box :done %>
-    <form.label :done, "実施済み" %>
+  <li>
+    <%= form.check_box :done %>
+    <%= form.label :done, "実施済み" %>
   </li>
-  <li><%= form.label :description, "説明" %>
+  <li>
+    <%= form.label :description, "説明" %>
     <%= form.text_area :description %>
   </li>
   <li>

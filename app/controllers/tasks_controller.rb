@@ -10,4 +10,9 @@ class TasksController < ApplicationController
   def new
     @task = Task.new
   end
+
+  def create
+    @task = Task.create(params[:task])
+    redirect_to @task
+  end
 end
