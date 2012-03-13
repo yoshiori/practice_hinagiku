@@ -3,6 +3,11 @@ class TasksController < ApplicationController
     @tasks = Task.where(:done => false)
   end
 
+  def done
+    @tasks = Task.where(:done => true)
+    render :index
+  end
+
   def show
     @task = Task.find(params[:id])
   end
@@ -35,6 +40,11 @@ class TasksController < ApplicationController
   def finish
     @task = Task.find(params[:id])
     @task.update_attribute(:done, true)
+    redirect_to :back
+  end
+  def restart
+    @task = Task.find(params[:id])
+    @task.update_attribute(:done, false)
     redirect_to :back
   end
 end
