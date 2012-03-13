@@ -1,5 +1,9 @@
 Hinagiku::Application.routes.draw do
-  resources :tasks
+  root :to => "tasks#index"
+  resources :tasks do
+    put :finish, :on => :member
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
