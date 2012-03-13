@@ -6,6 +6,7 @@
   <tr>
     <td><%= link_to task.name, task %></td>
     <td><%= task.due_date %></td>
+    <td><%= link_to "修正", [ :edit, task ] %></td>
   </tr>
   <% end %>
 </table>
