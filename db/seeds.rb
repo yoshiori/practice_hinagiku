@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 names = [
   "切手を買う",
@@ -17,5 +17,10 @@ description = "これは説明です。" * 20
               :done => n.zero?)
 end
 
-
+200.times do |n|
+  Task.create(:name => "Task #{n}",
+              :description => description,
+              :due_date => (n + 3).days.from_now,
+              :done => false)
+end
 
