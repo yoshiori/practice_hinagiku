@@ -5,12 +5,10 @@ http://tatsu-zine.com/books/rails3
 折角なので rails3.2.2 でやってみる
 
 本との相違は
-<<<<<<< HEAD
- 1.リソースの配置場所が public/ 以下ではなく app/assets 以下になってる
- 2.migrate の結果が違う self.up self.down じゃなく、インスタンスメソッドの change になってる
- 3.will_paginate-3.0.pre2 だと動かないので 3.0.3 使う
-=======
-1.リソースの配置場所が public/ 以下ではなく app/assets 以下になってる
-2.migrate の結果が違う self.up self.down じゃなく、インスタンスメソッドの change になってる
-3.will_paginate-3.0.pre2 だと動かないので 3.0.3 使う
->>>>>>> cfdc01315995e7445b295f45e119edc2a07e5cbb
+
+
+1. リソースの配置場所が public/ 以下ではなく app/assets 以下になってる
+
+2. migrate の結果が違う self.up self.down じゃなく、インスタンスメソッドの change になってる
+
+3. will_paginate-3.0.pre2 だと動かないので 3.0.3 使う
